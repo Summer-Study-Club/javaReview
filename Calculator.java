@@ -1,20 +1,55 @@
+
+import java.util.Scanner; //import scanner class
+
 // This class is a simple calculator that takes two numbers from user input and performs the user chosen arithmetic operation on those two numbers and then displays the answer to the user.
 public class Calculator {
-    public static void main (String [] args){
-        // TODO #1: Create a scanner object for capturing user input
+    public static void main (String [] args)
 
-        // TODO #2: Create 2 variable to hold user input for each number for the calculator
+        //Create a scanner object that intakes user input
+        Scanner userInput = new Scanner (System.in);
 
-        // TODO #3: Ask the user to enter the first number, save info into variable
+        double firstNum; //create variable for input numbers
+        double secondNum;
+        double answer;  //create variable for output number
 
-        // TODO #4: Ask the user to enter the second number, save info into variable
+        System.out.print ("Please enter the first number: ");
+        firstNum = userInput.nextDouble(); //assigns user input to firstNum
 
-        // TODO #5: Ask the user which operation they would like the calculator to perform on the two numbers- add, subtract, multiply, divide
+        System.out.print ("Please enter the second number: ");
+        secondNum = userInput.nextDouble(); //assigns user input to secondNum
+        userInput.nextLine();
+        // nextDouble does not take a carriage return into account
+        // takes away "Enter" from previous user input.
+        // Skipped operation input away because it thinks the "enter" was the input for operation
 
-        // TODO #6: Based on the user input from #5, execute the operation on the 2 given numbers.
 
-        // TODO #7: Display the result to the user
+        System.out.print("What operation would you like?: Enter the symbol (+, -, *, /) : ");
+        String userChoice = userInput.nextLine(); //takes user input for operation symbol
 
+        if (userChoice.equals("+"))
+        {
+            answer = firstNum + secondNum;
+            System.out.println("answer is: " + answer);
+        }
+        else if (userChoice.equals("-"))
+        {
+            answer = firstNum - secondNum;
+            System.out.println("answer is: " + answer);
+        }
+        else if (userChoice.equals("*"))
+        {
+            answer = firstNum * secondNum;
+            System.out.println("answer is: " + answer);
+        }
+        else if (userChoice.equals("/"))
+        {
+            answer = firstNum / secondNum;
+            System.out.println("answer is: " + answer);
+        }
+        else
+        {
+            System.out.println("Invalid operation. :( ");
+            }
+
+        }
     }
-
-}
