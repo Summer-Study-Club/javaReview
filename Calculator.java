@@ -1,7 +1,9 @@
+
 import java.util.Scanner; //import scanner class
 
+// This class is a simple calculator that takes two numbers from user input and performs the user chosen arithmetic operation on those two numbers and then displays the answer to the user.
 public class Calculator {
-    public static void main (String [] args){
+    public static void main (String [] args)
 
         //Create a scanner object that intakes user input
         Scanner userInput = new Scanner (System.in);
